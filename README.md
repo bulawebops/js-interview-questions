@@ -17,7 +17,8 @@ Both let and var are used for variable and method declaration in JavaScript. A d
 Functions that are automatically invoked are termed as Self Invoking Functions. These are also known as Immediately Invoked Function Expressions and Self Executing Anonymous Functions. The general syntax of a Self Invoking Function is:
 ```
 (some_function () {
-return () }) ();
+ return () }) ();
+}
 ```
 Typically, a function is defined and then invoked. However, if there is a need to automatically execute a function at the place where it is given and not be called again, then anonymous functions can be used. Such functions have no name, and thus the name.
 
@@ -28,15 +29,14 @@ Closures supposely a better, concise, and efficient way of writing code. Closure
 ```
 function greet(message) {
   console.log(message);
-}
+}```
 
-function greeter(name, age) {
+```function greeter(name, age) {
   return name + " says Hey!! He is " + age + " years old";
-}
+}```
 
-var message = greeter("John", 56);
-greet(message);
-```
+```var message = greeter("John", 56);
+greet(message);```
 
 ### The function can be represented in a better way by using closures below:
 ```
@@ -46,7 +46,7 @@ function greeter(name, age) {
   console.log(message);
  };
 }
-```
+
 let johnGreeter = greeter("John", 56);
 // Use the closure
 
