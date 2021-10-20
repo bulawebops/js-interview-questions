@@ -11,20 +11,21 @@ Both let and var are used for variable and method declaration in JavaScript. A d
 
 
 ## Name three built-in methods in JavaScript that you have used recently?
-Date(), pop(), slice()
+``` Date(), pop(), slice() ```
 
 ## Explain Self Invoking Function
 Functions that are automatically invoked are termed as Self Invoking Functions. These are also known as Immediately Invoked Function Expressions and Self Executing Anonymous Functions. The general syntax of a Self Invoking Function is:
-
+```
 (some_function () {
 return () }) ();
-
+```
 Typically, a function is defined and then invoked. However, if there is a need to automatically execute a function at the place where it is given and not be called again, then anonymous functions can be used. Such functions have no name, and thus the name.
 
 ## What are Closures?
 Closures supposely a better, concise, and efficient way of writing code. Closure is a locally declared variable that is related to a function and stays in the memory when the related function has returned. The closure contains all local variables that were in-scope at the time of the closure creation.
 
 ### Example of a normal function:
+```
 function greet(message) {
   console.log(message);
 }
@@ -35,16 +36,19 @@ function greeter(name, age) {
 
 var message = greeter("John", 56);
 greet(message);
+```
 
 ### The function can be represented in a better way by using closures below:
+```
 function greeter(name, age) {
-var message = name + " says Hey!! He is " + age + " years old";
-return function greet() {
-console.log(message);
-};
+  var message = name + " says Hey!! He is " + age + " years old";
+  return function greet() {
+  console.log(message);
+ };
 }
-
+```
 let johnGreeter = greeter("John", 56);
 // Use the closure
 
 johnGreeter();
+```
