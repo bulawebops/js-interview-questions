@@ -29,24 +29,27 @@ Closures supposely a better, concise, and efficient way of writing code. Closure
 ```
 function greet(message) {
   console.log(message);
-}```
+}
 
-```function greeter(name, age) {
+function greeter(name, age) {
   return name + " says Hey!! He is " + age + " years old";
-}```
+}
 
-```var message = greeter("John", 56);
-greet(message);```
+var message = greeter("John", 56);
+greet(message);
+```
 
 ### The function can be represented in a better way by using closures below:
-```function greeter(name, age) {
+```
+function greeter(name, age) {
   var message = name + " says Hey!! He is " + age + " years old";
   return function greet() {
   console.log(message);
  };
-}```
+}
 
-```let johnGreeter = greeter("John", 56);
-// Use the closure```
+let johnGreeter = greeter("John", 56);
+// Use the closure
 
-```johnGreeter();```
+johnGreeter();
+```
