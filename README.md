@@ -39,16 +39,14 @@ function greet(message) {
 greet(message);```
 
 ### The function can be represented in a better way by using closures below:
-```
-function greeter(name, age) {
+```function greeter(name, age) {
   var message = name + " says Hey!! He is " + age + " years old";
   return function greet() {
   console.log(message);
  };
-}
+}```
 
-let johnGreeter = greeter("John", 56);
-// Use the closure
+```let johnGreeter = greeter("John", 56);
+// Use the closure```
 
-johnGreeter();
-```
+```johnGreeter();```
